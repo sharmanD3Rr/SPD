@@ -66,7 +66,7 @@ public class Food extends Item {
 			switch (hero.heroClass) {
 			case WARRIOR:
 				if (hero.HP < hero.HT) {
-					hero.HP = Math.min( hero.HP + 5, hero.HT );
+					hero.HP = Math.min( hero.HP + 15, hero.HT );
 					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
 				}
 				break;
@@ -99,8 +99,8 @@ public class Food extends Item {
 	@Override
 	public String info() {
 		return 
-			"Nothing fancy here: dried meat, " +
-			"some biscuits - things like that.";
+			"Nothing fancy here: cupcakes, " +
+			"some coockies - things like that.";
 	}
 	
 	@Override
@@ -115,6 +115,6 @@ public class Food extends Item {
 	
 	@Override
 	public int price() {
-		return 10 * quantity;
+		return 50 * quantity;
 	}
 }
